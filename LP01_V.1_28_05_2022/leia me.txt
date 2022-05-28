@@ -1,0 +1,9 @@
++= INSTRUÇÃO =+
+
+01 - Página index principal
+02 - Quando usuário solicitar o e-book deve ser redirecionado para obrigado.html
+
+------------------------------------
+
+A. Realizar a integração com o sistema
+B. Subir o PDF para o servidor configurar para download do usuário

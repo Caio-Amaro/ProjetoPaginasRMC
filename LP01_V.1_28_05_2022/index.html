@@ -64,7 +64,8 @@
                             </p>
                         </div>
                     </div>
-                    <button type="button" class="btn btn1 btn-primary btn-lg">Quero meu E-book</button>        
+                    <a id="btten" href="#enviar"><button type="button" class="btn btn1 btn-primary btn-lg">Quero meu E-book</button></a>
+
 
             </div>
 
@@ -90,7 +91,7 @@
                             <img src="img/romildo-03.jpg">
                         </div>
                     </div>
-                    <button type="button" class="btn btn2 btn-primary btn-lg">Quero meu E-book</button>        
+                    <a href="#enviar"><button type="button" class="btn btn2 btn-primary btn-lg">Quero meu E-book</button><a>        
                 
             </div>
                 
@@ -109,15 +110,16 @@
                         <div class="col-lg-4">
                             <img src="img/Projeto.svg">
                         </div>
-                        <div class="col-lg-8">
+                        <div id="enviar" class="col-lg-8">
                             <form action="" method="">
-                                <input class="campoForm" type="text" name="nome" placeholder="NOME">
-                                <input class="campoForm" type="tel" name="nome" placeholder="TELEFONE">
-                                <input class="campoForm" type="email" name="nome" placeholder="E-MAIL">							
-                            </form>
+                                <form action="" method="">
+                                <input id="name" class="campoForm" type="text" name="nome" placeholder="NOME">
+                                <input id="phone" onkeydown="phoneMaskBrazil()" maxlength="15" class="campoForm" type="tel" name="nome" placeholder="TELEFONE">
+                                <input id="cidade" class="campoForm" type="text" name="nome" placeholder="CIDADE">
+                            </form>						                            
                         </div>
                     </div>
-                <button type="submit" class="btn btn1 btn-outline-success">QUERO MEU E-BOOK</button>  							
+                <button type="button" class="btn btn1 btn-outline-success" onclick="storeData()">QUERO MEU E-BOOK</button>   							
                 
             </div>
                 
@@ -160,5 +162,64 @@
 </body>
 
 <!-- JavaScript Bundle with Popper -->
+<!-- JavaScript Bundle with Popper -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+
+    function phoneMaskBrazil() {
+        var key = window.event.key;
+        var element = window.event.target;
+        var isAllowed = /\d|Backspace|Tab/;
+        if(!isAllowed.test(key)) window.event.preventDefault();
+        
+        var inputValue = element.value;
+        inputValue = inputValue.replace(/\D/g,'');
+        inputValue = inputValue.replace(/(^\d{2})(\d)/,'($1) $2');
+        inputValue = inputValue.replace(/(\d{4,5})(\d{4}$)/,'$1-$2');
+        
+        element.value = inputValue;
+    }
+
+    function storeData() {
+        var name = document.getElementById("name").value;
+        if(name.length == 0){
+            alert("Preencha o campo nome");
+            return;
+        }
+        var phone = document.getElementById("phone").value.replace(/\D/g, "");
+        alert(phone)
+        if(phone.length == 0){
+            alert("Preencha o campo Telefone");
+            return;
+        }
+        var cidade = document.getElementById("cidade").value;
+        
+        var data = {
+            landing_page_id: 'e10f5f18-3979-47fb-aa1f-873032db088b',
+            name: name,
+            phone: phone,
+            cidade: cidade
+        };
+
+        axios.post('https://api.engajabr.com.br/landing-page', data)
+            .then(function (response) {
+                name.value = ''
+                phone.value = ''
+                cidade.value = ''
+                alert('Dados enviados com sucesso!');
+            })
+            .catch(function (error) {
+                if (error.response.status === 422) {
+                    alert(error.response.data.message)
+                    console.log(error.response.data.errors)
+                } else {
+                    alert('Erro ao enviar os dados!')
+                    console.log(error)
+                }
+            });
+    location.replace("file:///G:/Caio2019/ClientesDevHoopa/DEV_Clientes/CLIENTELA%20DO%20DEV.%20BARBINHA/2021%20e%202022/Romildo%20PV/Landing%20Page%20Romildo/LP01_V.1_28_05_2022/obrigado.html")       
+    }
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
 </html>

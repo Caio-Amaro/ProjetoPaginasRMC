@@ -1,0 +1,404 @@
+/***** FONTES *****/
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('fonts/Gotham-Bold.eot');
+    src: url('fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Gotham-Bold.woff2') format('woff2'),
+        url('fonts/Gotham-Bold.woff') format('woff'),
+        url('fonts/Gotham-Bold.ttf') format('truetype'),
+        url('fonts/Gotham-Bold.svg#Gotham-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('fonts/Gotham-Book.eot');
+    src: url('fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Gotham-Book.woff2') format('woff2'),
+        url('fonts/Gotham-Book.woff') format('woff'),
+        url('fonts/Gotham-Book.ttf') format('truetype'),
+        url('fonts/Gotham-Book.svg#Gotham-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('fonts/Gotham-Black.eot');
+    src: url('fonts/Gotham-Black.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Gotham-Black.woff2') format('woff2'),
+        url('fonts/Gotham-Black.woff') format('woff'),
+        url('fonts/Gotham-Black.ttf') format('truetype'),
+        url('fonts/Gotham-Black.svg#Gotham-Black') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+/***** GERAIS *****/
+
+body.lp-001 {
+    overflow-x: hidden;
+}
+
+
+/***** TEXTOS *****/
+
+  p {
+    font-family: 'Gotham';
+    font-size: 15px;
+}
+
+h6 {
+    font-family: 'Gotham';
+    font-weight: 400 !important;
+}
+
+.text-g{
+    color: #063B33 !important;
+}
+
+
+
+
+
+/***** BOTÕES *****/
+
+
+button.btn-modal {
+    background: transparent;
+    border: none !important;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0 0;
+    font-size: 21px;
+    font-family: 'Gotham';
+    font-weight: 200;
+    margin: 10px 0 30px;
+}
+
+button.btn-modal:hover {
+    color: #2b6a61;
+    background: transparent;
+    transition: 1s;
+}
+
+button.btn-modal:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+
+
+
+
+
+
+/***** BACKGROUNDS *****/
+
+.background-type-01 {
+    background: url('../img/bg-001.jpg');
+}
+
+.background-type-02 {
+    background: url('../img/bg-002.jpg');
+}
+
+.background-fixed {
+    background-attachment: fixed;
+}
+
+
+
+/***** BLOCOS E IMAGENS *****/
+
+    .row img {
+        width: 100%;
+    }
+
+    .sub-ttl-1 {
+        max-width: 230px;
+        margin: 0px auto 20px;
+        letter-spacing: 3px;
+        line-height: 1.2;
+        color: black;
+        text-shadow: 2px 2px 4px #808080ba;
+    }
+
+
+    /***** MODAL *****/
+
+
+    .modal-header {
+        background: #031e1a;
+        color: white;
+        font-weight: 300;
+        letter-spacing: 7px;
+        border: solid white;
+    }
+
+
+    .modal .row {
+        height: auto !important;
+        align-items: center;
+    }
+
+    .modal img {
+        border-radius: 100px 0 100px 0;
+        box-shadow: 1px 1px 8px #939393;
+    }
+
+    .modal button.close {
+        background: transparent;
+        border: none;
+    }
+
+    .modal button.close span {
+        color: white;
+        font-size: 25px;
+        line-height: 1;
+        transition: 1s;
+    }
+
+    .modal button.close span:hover {
+        opacity: 0.5;
+
+    }
+    
+
+
+/***** BLOCOS - AJUSTES INDIVIDUAIS ******/
+
+
+.empregosVerdes {
+    margin: 0 auto 30px;
+    max-width: 330px;
+}
+
+.bloco1 .col-xl-7, .bloco1 .col-xl-5 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3%;
+}
+
+.bloco1 .row {
+    margin: 0;
+}
+
+
+
+/***** VÍDEO YOUTUBE ******/
+
+.embed-responsive.embed-responsive-16by9 iframe {
+    box-shadow: -15px -15px 15px #0000007a;
+    transition: 0.5s;
+    max-width: 600px;
+}
+
+.embed-responsive.embed-responsive-16by9 iframe:hover {
+    box-shadow: -10px -10px 15px #0000007a;
+    transition: 1s;
+}
+
+
+/***** FORM *****/
+
+.campoForm {
+    width: 70%;
+    padding: 10px;
+    background: transparent;
+    box-shadow: none !important;
+    border: solid 1px #063b33;
+    border-radius: 5px;
+    color: #063b33;
+    font-weight: 600;
+    margin: 10px 0;
+    font-size: 0.8em;
+    background: white;
+}
+
+input.campoForm::placeholder {
+    color: #063b33b5;    
+    font-weight: 500;
+}
+
+button.btn.btn1 {
+    width: 70%;
+    margin: 10px 0 0;
+    background: #063b33;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-family: 'Gotham';
+    letter-spacing: 1.2px;
+    font-weight: 300;
+    transition: 1s;
+}
+
+button.btn.btn1:hover {
+    background: #1a1a1a;
+    color: #d9e5e3;
+}
+
+button.btn.btn1:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+
+  /***** FOOTER *****/
+
+
+  footer {
+    background: linear-gradient(45deg, black, #063b33);
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    margin: 0 !important;
+    padding: 15px 0;
+    border-top: solid 1px #181818;
+}
+
+
+
+footer img.logoPv {
+    max-width: 170px;
+}
+
+footer img.logoRomildo {
+    max-width: 270px;
+}
+
+
+
+/***** FOOTER SOCIAL ICONS *****/
+
+ul.socialIcons {
+    padding-left: 0;
+    text-align: center;
+    margin: 0;
+}
+
+ul.socialIcons li {
+    display: inline-block;
+}
+
+ul.socialIcons li a {
+    text-decoration: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+ul.socialIcons li a:hover {
+    transition: 0.3s;
+    opacity: 0.7;
+    transform: scale(1.2);
+}
+
+
+footer a {
+    text-align: center !important;
+}
+
+footer a.link_01 {
+    display: inline-block;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    font-family: 'Gotham';
+    font-weight: 400;
+    font-size: 1em;
+}
+
+footer a.link_01:hover {
+    color: white;
+    transition: 0.3s;
+    opacity: 0.5;
+}
+
+
+a.fa.fa-whatsapp {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 1em;
+}
+
+a.fa.fa-whatsapp:hover {
+    opacity: 0.3;
+    transition: 0.4s;
+}
+
+a.fa.fa-whatsapp span {
+    font-family: 'Gotham';
+    font-weight: 300;
+    margin-left: 10px;
+    font-size: 15px !important;
+}
+
+
+
+
+/***** RESPONSIVO *****/
+
+ 
+
+@media only screen and (max-width: 1200px) {
+
+    .campoForm, button.btn.btn1 {
+        width: 60%;
+    }
+
+    .empregosVerdes {
+        max-width: 560px;
+    }
+
+    .sub-ttl-1 {
+        max-width: 70%;
+        margin: 20px auto 40px;
+        font-size: 1.2rem;
+    }
+
+    .bloco1 .col-xl-7, .bloco1 .col-xl-5 {
+        min-height: 70vh;
+        padding: 5% 10%;
+    }
+
+  }
+
+
+@media only screen and (max-width: 900px) {
+
+
+    /***** FORM DE CONTATO *****/
+    .campoForm {
+        width: 70%;
+        margin: 0 0 30px;
+
+    }
+
+
+    .campoForm, button.btn.btn1 {
+        width: 70%;
+    }
+    
+  }
+

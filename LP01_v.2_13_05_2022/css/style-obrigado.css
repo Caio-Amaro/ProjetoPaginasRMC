@@ -1,0 +1,13 @@
+.pagina-obrigado h1 {
+    font-size: 8em;
+    font-weight: 900;
+    letter-spacing: 0px;
+}
+
+
+/***** BLOCO 1 *****/
+
+.pagina-obrigado .bloco1 .row {
+    margin-top: auto;
+    margin-bottom: auto !important;
+}

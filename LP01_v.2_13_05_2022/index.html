@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<link rel="stylesheet" href="css/style.css">
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+<!--FONT AWESOME-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    
+</head>
+<body class="lp-001">
+
+    <!--BLOCO 1 -->
+
+    <div class="bloco1 bg-image-full text-center background-type-01 background-fixed">
+
+        <div class="row">
+            <div class="col-xl-7">
+                
+                <img src="img/logo-romildo.png" alt="Romildo Campello" style="max-width: 330px;margin: 0 auto;" class="logo-desktop">
+    
+                <button type="button" class="btn btn-primary btn-modal" data-toggle="modal" data-target="#exampleModal">Quem sou eu?</button> 
+  
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Sobre o autor</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                                <div class="modal-body">
+                                    <div class="row gx-5">
+                                        <div class="col-lg-8">
+                                            <p class="">Romildo Campello é pernambucano, casado e pai de 4 filhos. Possui formação na área de tecnologia e geografia e atualmente é pós-graduando em Gestão Corporativa, Riscos e Compliance.
+                                                        Com ampla experiência na gestão pública, foi secretário do Verde e Meio Ambiente, Secretário Chefe de Gabinete e também Ouvidor Geral de Mogi das Cruzes (oportunidade em que ganhou o Prêmio Mário Covas por inovação em Gestão Municipal).
+                                                        Foi presidente estadual da Associação Nacional de Órgãos Municipais de Meio Ambiente (Anamma) e secretário-adjunto do Verde e Meio Ambiente da cidade de São Paulo. Exerceu também os cargos de chefe de Gabinete e secretário de Turismo do Estado de São Paulo, Secretário Adjunto e Secretário da Cultura do Estado de São Paulo.</p>                                                        
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <img src="img/romildo-03.jpg">
+                                            </div>
+                                    </div>
+                                </div>
+
+                        </div>
+                        </div>
+                    </div>
+  
+
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/f7a5Z0RpQ4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>               
+                
+                
+            </div>
+
+            <div class="col-xl-5 background-type-02">
+
+                <img src="img/dezEmpregosVerdes.png" alt="Dez Empregos Verdes" class="empregosVerdes">
+
+                <h6 class="sub-ttl-1">Quem disse que não podemos gerar renda de forma sustentável?</h6>
+                
+                
+                
+               <!--- <img src="img/logo-romildo.png" alt="Romildo Campello" style="max-width: 75%;" class="logo-mobile">
+                <img src="img/romildo-02.png">-->
+                <form action="" method="">
+                    <input class="campoForm" type="text" name="nome" placeholder="NOME">
+                    <input class="campoForm" type="tel" name="nome" placeholder="TELEFONE">
+                    <input class="campoForm" type="email" name="nome" placeholder="E-MAIL">
+                    <button type="submit" class="btn btn1 btn-outline-success" onclick="storeData()">QUERO MEU E-BOOK</button> 							
+                </form>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!--BLOCO 5 FOOTER -->
+
+    <footer class="row">
+
+            <div class="col-sm-4">
+                <img src="img/logor.svg" class="logoRomildo">
+            </div>
+            <div class="col-sm-4">
+                <img src="img/logopartido.svg" class="logoPv" alt="Logo Partido Verde">
+
+            </div>
+            <div class="col-sm-4">
+
+                <ul class="socialIcons">
+                    <li><a href="https://www.facebook.com/romildocampello" class="fa fa-facebook" target="_blank"></a></li>
+                    <li><a href="https://www.instagram.com/romildocampello/" class="fa fa-instagram" target="_blank"></a></li>
+                    <li><a href="https://twitter.com/romildocampello" class="fa fa-twitter" target="_blank"></a></li>
+                    <li><a href="https://www.youtube.com/romildocampello" class="fa fa-youtube-play" target="_blank"></a></li>
+                </ul>
+
+                <a href="http://www.pvsp.org.br/" target="_blank" class="link_01">partidoverdesp</a>
+                <a href="https://api.whatsapp.com/send?phone=5511950201143&text=Ol%C3%A1%2C%20bom%20dia!" class="fa fa-whatsapp" target="_blank"><span>(11) 9 5020 1143</span></a>
+            </div>
+
+    </footer>
+
+
+</body>
+
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+
+    function phoneMaskBrazil() {
+        var key = window.event.key;
+        var element = window.event.target;
+        var isAllowed = /\d|Backspace|Tab/;
+        if(!isAllowed.test(key)) window.event.preventDefault();
+        
+        var inputValue = element.value;
+        inputValue = inputValue.replace(/\D/g,'');
+        inputValue = inputValue.replace(/(^\d{2})(\d)/,'($1) $2');
+        inputValue = inputValue.replace(/(\d{4,5})(\d{4}$)/,'$1-$2');
+        
+        element.value = inputValue;
+    }
+
+    function storeData() {
+        var name = document.getElementById("name").value;
+        if(name.length == 0){
+            alert("Preencha o campo nome");
+            return;
+        }
+        var phone = document.getElementById("phone").value.replace(/\D/g, "");
+        alert(phone)
+        if(phone.length == 0){
+            alert("Preencha o campo Telefone");
+            return;
+        }
+        var cidade = document.getElementById("cidade").value;
+        
+        var data = {
+            landing_page_id: 'e10f5f18-3979-47fb-aa1f-873032db088b',
+            name: name,
+            phone: phone,
+            cidade: cidade
+        };
+
+        axios.post('https://api.engajabr.com.br/landing-page', data)
+            .then(function (response) {
+                name.value = ''
+                phone.value = ''
+                cidade.value = ''
+                alert('Dados enviados com sucesso!');
+            })
+            .catch(function (error) {
+                if (error.response.status === 422) {
+                    alert(error.response.data.message)
+                    console.log(error.response.data.errors)
+                } else {
+                    alert('Erro ao enviar os dados!')
+                    console.log(error)
+                }
+            });
+    location.replace("file:///G:/Caio2019/ClientesDevHoopa/DEV_Clientes/CLIENTELA%20DO%20DEV.%20BARBINHA/2021%20e%202022/Romildo%20PV/Landing%20Page%20Romildo/LP01_V.1_28_05_2022/obrigado.html")       
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</html>
